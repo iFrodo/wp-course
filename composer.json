@@ -1,0 +1,16 @@
+{
+    "require": {
+        "johnpbloch/wordpress": "^6.4"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "johnpbloch/wordpress-core-installer": true
+        }
+    }
+}
