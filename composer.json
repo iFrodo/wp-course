@@ -1,16 +1,29 @@
 {
+    "type": "project",
+    "config": {
+        "vendor-dir": "content/vendor",
+        "allow-plugins": {
+            "johnpbloch/wordpress-core-installer": true,
+            "composer/installers": true
+        }
+    },
+    "extra": {
+        "installer-paths": {
+            "wordpress/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+            "wordpress/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+        }
+    },
     "require": {
-        "johnpbloch/wordpress": "^6.4"
+        "johnpbloch/wordpress": ">=6.4.2",
+        "wpackagist-plugin/advanced-custom-fields": "*",
+        "wpackagist-plugin/contact-form-7": "^5.8",
+        "wpackagist-plugin/hc-custom-wp-admin-url": "^1.4",
+        "wpackagist-plugin/rus-to-lat-advanced": "^1.1"
     },
     "repositories": [
         {
             "type": "composer",
-            "url": "https://wpackagist.org"
+            "url" : "https://wpackagist.org"
         }
-    ],
-    "config": {
-        "allow-plugins": {
-            "johnpbloch/wordpress-core-installer": true
-        }
-    }
+    ]
 }
